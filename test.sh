@@ -15,14 +15,14 @@ rm output/*
 for file in $(ls input); do
     echo -n "Testing $file..."
     timeout 5 ./app <input/$file >output/$file 2>&1
-    if [[ -f answer/$file ]]; then
-        if diff -q output/$file answer/$file >/dev/null; then
+    if [[ -f sample_ans/$file ]]; then
+        if diff -q output/$file sample_ans/$file >/dev/null; then
             echo "passed."
         else
             echo "failed."
         fi
     else
-        echo "done. (answer file not found)"
+        echo "done. (sample_ans file not found)"
     fi
 done
 
