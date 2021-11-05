@@ -1,0 +1,21 @@
+{
+    "name": "icpc-dman-apu",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".",
+    },
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "/bin/bash"
+            },
+        },
+        "terminal.integrated.defaultProfile.linux": "bash",
+    },
+    "extensions": [
+        "visualstudioexptteam.vscodeintellicode",
+        "ms-vscode.cpptools-extension-pack",
+    ],
+    "updateRemoteUserUID": true,
+    "remoteUser": "vscode",
+}
